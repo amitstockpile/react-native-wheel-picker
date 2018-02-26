@@ -6,6 +6,7 @@ import {
 	View,
 	ColorPropType,
 	requireNativeComponent,
+	ViewPropTypes
 } from 'react-native';
 
 const defaultItemStyle = { color: 'white', fontSize: 26 };
@@ -13,7 +14,7 @@ const defaultItemStyle = { color: 'white', fontSize: 26 };
 const WheelCurvedPickerNativeInterface = {
 	name: 'WheelCurvedPicker',
 	propTypes: {
-		...View.propTypes,
+		...ViewPropTypes,
 		data:PropTypes.array,
 		textColor: ColorPropType,
 		textSize: PropTypes.number,
@@ -30,7 +31,7 @@ const WheelCurvedPickerNative = requireNativeComponent('WheelCurvedPicker', Whee
 class WheelCurvedPicker extends React.Component {
 
 	propTypes: {
-		...View.propTypes,
+		...ViewPropTypes,
 
 		data: PropTypes.array,
 
